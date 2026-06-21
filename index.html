@@ -1,135 +1,126 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>كريم | مطور ويب</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Cairo', sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white; min-height: 100vh; transition: 0.3s;
-    }
-    body.dark { background: #0f172a; }
-    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
-    h1 { font-size: 3rem; margin-bottom: 1rem; }
-    p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
-    .btn { background: white; color: #667eea; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; }
-    /* Navbar زجاجي */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.2);
-  backdrop-filter: blur(12px);
-  padding: 15px 0;
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-  <h2>تواصل معي</h2>
-
-}
-#projects > div > div:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(15,98,254,0.4);
-}
-
-/* مسافة باش الـ navbar ما يغطيش العنوان */
-.hero {
-  padding-top: 80px;
-           }
-    .theme-btn { position: fixed; top: 20px; left: 20px; background: #22c55e; width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; cursor: pointer; z-index: 100; }
-    #about { padding: 100px 20px; text-align: center; max-width: 800px; margin: auto; }
-#about p { padding: 0 15px; line-height: 1.8; }
-    #about h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClawVision - AI for Industrial Robots</title>
+    <meta name="description" content="برمجيات ذكاء اصطناعي للروبوتات الصناعية Fanuc, ABB, Kuka تعمل 24/7">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #0d1117; 
+            color: #c9d1d9; 
+            font-family: 'Cairo', sans-serif; 
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+        }
+        h1 { 
+            color: #58a6ff; 
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8b949e;
+            margin-bottom: 30px;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background: #161b22;
+            padding: 20px 40px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        .stat h3 { color: #3fb950; font-size: 2rem; }
+        .tech {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .tech-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .badge {
+            background: #1f6feb;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .btn {
+            background: #238636;
+            color: white;
+            padding: 14px 35px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #30363d;
+            color: #8b949e;
+        }
+    </style>
 </head>
 <body>
-  <button class="theme-btn" onclick="toggleTheme()">🌙</button>
-  <section class="hero">
-    <h1>مرحباً، أنا كريم</h1>
-    <p>مطور ويب أحوّل الأفكار إلى مواقع تفاعلية سريعة وأنيقة</p>
-    <a href="#about" class="btn">اكتشف المزيد</a>
-  </section>
-  <section id="about">
-    <h2>من أنا</h2>
-    <p>أنا كريم، مطور ويب من الجزائر. متخصص في بناء مواقع وتطبيقات ويب حديثة باستخدام HTML, CSS, JavaScript. نحب التصميم النظيف والتجربة السلسة.</p>
-  </section>
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-      document.querySelector('.theme-btn').textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-    }
-    if(localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark');
-      document.querySelector('.theme-btn').textContent = '☀️';
-    }
-  </script>
+    <section class="hero">
+        <div class="container">
+            <h1>ClawVision 🤖</h1>
+            <p class="subtitle">برمجيات ذكاء اصطناعي للروبوتات الصناعية تعمل 24/7 بدون توقف</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <h3>99.2%</h3>
+                    <p>Uptime</p>
+                </div>
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>تشغيل متواصل</p>
+                </div>
+                <div class="stat">
+                    <h3>Fanuc, ABB, Kuka</h3>
+                    <p>متوافق مع</p>
+                </div>
+            </div>
 
-  <section id="projects" style="padding:100px 20px; text-align:center;">
-    <h2 style="font-size:2.5rem; margin-bottom:3rem;">مشاريعي</h2>
-    
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; max-width:1200px; margin:auto;">
-      
-      <div style="background:rgba(255,255,255,0.05); padding:30px; border-radius:15px; border:1px solid rgba(255,255,255,0.1);">
-        <h3 style="margin-bottom:1rem;">🤖 شات بوت ذكي</h3>
-        <p style="opacity:0.8; margin-bottom:1.5rem;">بوت واتساب يرد على الزبائن تلقائياً باستخدام GPT</p>
-        <a href="#" style="background:#0F62FE; color:white; padding:10px 20px; border-radius:25px; text-decoration:none;">شوف التفاصيل</a>
-      </div>
-      
-      <div style="background:rgba(255,255,255,0.05); padding:30px; border-radius:15px; border:1px solid rgba(255,255,255,0.1);">
-        <h3 style="margin-bottom:1rem;">🎨 مولد صور AI</h3>
-        <p style="opacity:0.8; margin-bottom:1.5rem;">موقع يحول النص لصور احترافية بالذكاء الاصطناعي</p>
-        <a href="#" style="background:#0F62FE; color:white; padding:10px 20px; border-radius:25px; text-decoration:none;">شوف التفاصيل</a>
-      </div>
-      
-      <div style="background:rgba(255,255,255,0.05); padding:30px; border-radius:15px; border:1px solid rgba(255,255,255,0.1);">
-        <h3 style="margin-bottom:1rem;">📊 محلل بيانات</h3>
-        <p style="opacity:0.8; margin-bottom:1.5rem;">أداة تحلل ملفات Excel وتعطيك تقارير ذكية</p>
-        <a href="#" style="background:#0F62FE; color:white; padding:10px 20px; border-radius:25px; text-decoration:none;">شوف التفاصيل</a>
-      </div>
-      
-    </div>
-  </section>
-  
-  <section id="contact" style="padding:100px 20px; text-align:center;">
-    </div>
-  </section>
+            <a href="mailto:open-claw-ai" class="btn">تواصل معنا</a>
+        </div>
+    </section>
 
-  <section id="contact" style="padding: 100px 20px; text-align: center;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">تواصل معي</h2>
-    <p style="margin-bottom: 30px; opacity: 0.9;">مهتم تخدم معايا؟ شوف بروفايلي أو راسلني مباشرة</p>
-    
-    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-      <a href="https://github.com/clawvision" target="_blank" style="background: #24292e; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        GitHub 🐙
-      </a>
-      <a href="mailto:allelkarim98@gmail.com" style="background: #EA4335; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        📧 ايميل
-      </a>
-      <a href="https://wa.me/213665934656" target="_blank" style="background: #25D366; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        💬 واتساب
-      </a>
-    </div>
-  </section>
+    <section class="tech">
+        <div class="container">
+            <h2>التقنيات اللي نخدمو بيها</h2>
+            <div class="tech-badges">
+                <span class="badge">Python</span>
+                <span class="badge">C++</span>
+                <span class="badge">ROS</span>
+                <span class="badge">TensorFlow</span>
+                <span class="badge">Rapid</span>
+            </div>
+        </div>
+    </section>
 
-</main>
+    <footer>
+        <p>© 2026 ClawVision | Karim Allel | Open Claw AI</p>
+    </footer>
 </body>
 </html>
