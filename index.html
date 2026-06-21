@@ -150,26 +150,45 @@
         <p>© 2026 ClawVision - صنع بـ 💚 في الجزائر</p>
     </footer>
 
-    <script>
-        const cards = document.querySelectorAll('.card');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) entry.target.classList.add('show');
-            });
-        });
-        cards.forEach(card => observer.observe(card));
+<!-- زر تبديل الثيم -->
+<!-- زر تبديل الثيم -->
+<button onclick="switchTheme()" id="themeToggle" style="position:fixed;top:20px;left:20px;z-index:99999;background:var(--accent);color:#000;border:none;width:45px;height:45px;border-radius:50%;font-size:22px;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.3)">
+  ☀️
+</button>
 
-        function toggleTheme() {
-            const body = document.body;
-            const btn = document.querySelector('.theme-btn');
-            if(body.getAttribute('data-theme') === 'light') {
-                body.removeAttribute('data-theme');
-                btn.textContent = '🌙';
-            } else {
-                body.setAttribute('data-theme', 'light');
-                btn.textContent = '☀️';
-            }
-        }
-    </script>
+<script>
+  // نخزن الثيم في المتصفح
+  let isDark = localStorage.getItem('theme') !== 'light';
+  
+  function switchTheme() {
+    const root = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    
+    if (isDark) {
+      // نحولو لايت مود
+      root.style.setProperty('--bg', '#ffffff');
+      root.style.setProperty('--bg-card', 'rgba(0,0,0,0.05)');
+      root.style.setProperty('--text', '#000000');
+      root.style.setProperty('--text-muted', '#555555');
+      btn.innerHTML = '🌙';
+      localStorage.setItem('theme', 'light');
+    } else {
+      // نرجعو دارك مود
+      root.style.setProperty('--bg', '#0a0a0a');
+      root.style.setProperty('--bg-card', 'rgba(255,255,255,0.05)');
+      root.style.setProperty('--text', 'white');
+      root.style.setProperty('--text-muted', '#b3b3b3');
+      btn.innerHTML = '☀️';
+      localStorage.setItem('theme', 'dark');
+    }
+    isDark = !isDark;
+  }
+  
+  // نشوفو الثيم المحفوظ كي يفتح الموقع
+  if (localStorage.getItem('theme') === 'light') {
+    isDark = true;
+    switchTheme();
+  }
+</script>
 </body>
 </html>
