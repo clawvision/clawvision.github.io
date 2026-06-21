@@ -17,6 +17,48 @@
     h1 { font-size: 3rem; margin-bottom: 1rem; }
     p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
     .btn { background: white; color: #667eea; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+    /* Navbar زجاجي */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(12px);
+  padding: 15px 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: #0F62FE;
+}
+
+/* Hover للكروت */
+#projects > div > div {
+  transition: 0.3s;
+}
+#projects > div > div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(15,98,254,0.4);
+}
+
+/* مسافة باش الـ navbar ما يغطيش العنوان */
+.hero {
+  padding-top: 80px;
+           }
     .theme-btn { position: fixed; top: 20px; left: 20px; background: #22c55e; width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 1.5rem; cursor: pointer; z-index: 100; }
     #about { padding: 100px 20px; text-align: center; max-width: 800px; margin: auto; }
 #about p { padding: 0 15px; line-height: 1.8; }
