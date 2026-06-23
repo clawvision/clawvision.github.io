@@ -3,93 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClawVision - AI Software for Industrial Robots</title>
+    <title>ClawVision - برمجة الروبوتات الصناعية</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background: #0a0a0a; 
-            color: white; 
-            font-family: 'Segoe UI', Tahoma, Arial; 
-            line-height: 1.6;
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
         }
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
-        header { text-align: center; padding: 80px 20px; }
-        h1 { font-size: 3.5rem; margin-bottom: 15px; }
-        .subtitle { font-size: 1.2rem; color: #ccc; margin-bottom: 10px; }
-        .stats { color: #22c55e; font-weight: bold; margin: 20px 0; }
-        .btn { 
-            background: #22c55e; 
-            padding: 15px 35px; 
-            border-radius: 8px; 
-            color: white; 
-            text-decoration: none; 
-            font-weight: bold;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #161b22;
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+        }
+        h1 { color: #58a6ff; font-size: 2.8em; margin-bottom: 10px; }
+        h2 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-top: 40px; }
+        .subtitle { color: #8b949e; font-size: 1.2em; margin-bottom: 30px; }
+        .btn {
+            background-color: #238636;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 6px;
             display: inline-block;
             margin-top: 20px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn:hover { background-color: #2ea043; }
+        .tech {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .tech-item { text-align: center; }
+        .tech-item img {
+            height: 50px;
+            filter: grayscale(1) brightness(1.5);
             transition: 0.3s;
         }
-        .btn:hover { background: #16a34a; transform: scale(1.05); }
-        section { padding: 60px 20px; text-align: center; }
-        h2 { font-size: 2.5rem; color: #22c55e; margin-bottom: 40px; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { 
-            background: #1a1a1a; 
-            padding: 30px; 
-            border-radius: 15px; 
-            border: 1px solid #333;
-            transition: 0.3s;
+        .tech-item img:hover {
+            filter: grayscale(0) brightness(1);
+            transform: scale(1.1);
         }
-        .card:hover { border-color: #22c55e; transform: translateY(-5px); }
-        .card h3 { color: #22c55e; margin-bottom: 15px; font-size: 1.5rem; }
-        .about { background: #111; }
-        .contact { background: #1a1a1a; }
-        .contact a { color: #22c55e; text-decoration: none; }
-        footer { text-align: center; padding: 30px; border-top: 1px solid #333; color: #888; }
-        @media (max-width: 768px) { h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } }
+        .tech-item p { margin-top: 10px; font-size: 0.9em; color: #8b949e; }
     </style>
-    <!-- Force rebuild cache 2026-06-22 22:19 -->
 </head>
-
 <body>
-<header>
-<section class="hero">
-<div class="container">
-    <h1>ClawVision 🚀</h1>
-    <p class="subtitle">AI Software for Fanuc, Kuka, ABB, Yaskawa Robots</p>
-    <p class="stats">99.2% Uptime | 24/7 Operation Without Stops</p>
-    <div class="card">
-        <h2>🤖 Robot Vision Integration</h2>
-        <p>توجيه دقيق للروبوت باستخدام ABB و Kuka و Fanuc مع أنظمة الرؤية الصناعية بلا حدود</p>
-    </div>
-    <div class="card">
-        <h2>🔍 AI Quality Control</h2>
-        <p>فحص الجودة بالذكاء الاصطناعي يكتشف العيوب بنسبة 99.8 بالمئة من أول مرة</p>
-    </div>
-    <div class="card">
-        <h2>⚡ Predictive Maintenance</h2>
-        <p>الصيانة التنبؤية تتنبأ بالأعطال قبل حدوثها وتقلل وقت التوقف بنسبة 90 بالمئة</p>
-    </div>
-</div>
-</section>
-</header>
-
-<section class="about">
-    <h2>من نحن</h2>
-    <p style="max-width: 700px; margin: auto; font-size: 1.1rem;">
-        ClawVision متخصصة في تطوير الذكاء الاصطناعي الصناعي لشركات الروبوتات. نساعد المصانع على تحقيق الكفاءة بلا توقف 24/7. بدعم من أفضل أنظمة الروبوتات العالمية Fanuc, Kuka, ABB, Yaskawa.
-    </p>
-</section>
-
-<section class="contact">
     <div class="container">
-        <h2>تواصل معنا</h2>
-        <p>هل تريد تطوير خط إنتاج ذكي؟</p>
-        <p style="margin-top: 20px; font-size: 1.2rem;"><a href="mailto:alielkarim08@gmail.com">allelkarim98@gmail.com</a></p>
-      </div>
-</section>
-
- <footer>
-   <p>© 2026 ClawVision. All Rights Reserved.</p>
-</footer>
+        <h1>ClawVision</h1>
+        <p class="subtitle">حلول برمجية متقدمة للروبوتات الصناعية: FANUC، KUKA، Yaskawa</p>
+        <a href="mailto:contact@clawvision.com" class="btn">اطلب عرض سعر</a>
+        
+        <h2>نعتمد على أحدث التقنيات العالمية</h2>
+        <div class="tech">
+            <div class="tech-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" alt="OpenCV">
+                <p>OpenCV</p>
+            </div>
+            <div class="tech-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" alt="Intel">
+                <p>Intel</p>
+            </div>
+            <div class="tech-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/OpenVINO_logo.png" alt="OpenVINO">
+                <p>OpenVINO</p>
+            </div>
+            <div class="tech-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                <p>Python</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
